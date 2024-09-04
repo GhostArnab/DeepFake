@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepfake Detection Tool</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Deepfake Detection Tool</h1>
+        <p>Identify potential face-swapping crimes in videos and photos.</p>
+    </header>
+
+    <main>
+        <section class="upload-section">
+            <h2>Upload Media to Check Deepfake</h2><img class= "img_a"src="https://cdn6.aptoide.com/imgs/7/9/2/792d071365e7458bb2759accbfa4b352_icon.png" height="40" width="40">
+            <br>
+            <div class="upload-options">
+                <div class="upload-box">
+                    <input type="file" id="videoUpload" accept="video/*">
+                    <label for="videoUpload">Upload Video</label>
+                </div>
+                <br>
+                <div class="upload-box">
+                    <input type="file" id="photoUpload" accept="image/*">
+                    <label for="photoUpload">Upload Photo</label>
+                </div>
+            </div>
+            <br>
+            <button id="checkButton">Check for Deepfake</button>
+        </section>
+
+        <section id="resultSection" class="hidden">
+            <h2>Analysis Result</h2>
+            <div id="loadingMessage" class="hidden">Analyzing... Please wait.</div>
+            <div id="resultMessage"></div>
+            <div id="confidenceLevel" class="hidden"></div>
+        </section>
+
+        <div id="spinner" class="spinner hidden"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Deepfake Detection Tool. All rights reserved.</p>
+    </footer>
+</body>
+</html>
